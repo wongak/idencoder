@@ -111,7 +111,7 @@ func (a *AlphabetEncoder) ToBase10(s string) (int64, error) {
 	for i, c := range bs {
 		ix := strings.IndexByte(a.alphabet, c)
 		if ix == -1 {
-			return 0, fmt.Errorf("invalid non-alphabet char: %s", c)
+			return 0, fmt.Errorf("invalid non-alphabet char: %c", c)
 		}
 		n += (int64(ix) * pow(a.base, int64(i)))
 	}
