@@ -100,6 +100,7 @@ func (a *AlphabetEncoder) reverse(bs []byte) {
 	}
 }
 
+// ToBase10 reverses the encoding
 func (a *AlphabetEncoder) ToBase10(s string) (int64, error) {
 	if len(s) == 0 {
 		return 0, fmt.Errorf("invalid empty string")
